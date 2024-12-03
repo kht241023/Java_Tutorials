@@ -45,15 +45,40 @@ public class MapEx {
         // HashMap 생성
         Map<String, Integer> map = new HashMap<String, Integer>();
 
-        // 사과 1000   바나나 2000   포도 3000 추가
-        // 사과가 얼마인지 System 출력문 이용해서 확인
-        // 물가가 올랐습니다. 사과를 1500으로 변경
-        // 바나나 판매합니까? System 출력문 이용해서 확인 Yes or No
-        // 3000원 짜리 과일이 존재합니까? System 출력문 이용해서 확인  Yes or No
-        // 바나나 품절됐습니다. 바나나 데이터 삭제
-        // 과일의 개수는 ?  System 출력문 이용해서 확인
-        // 모든 키 출력
-        // 모든 값 출력
-        // 모든 키와 값 출력
+        //1. 사과 1000   바나나 2000   포도 3000 추가
+        map.put("사과"  , 1000);
+        map.put("바나나", 2000);
+        map.put("포도"  , 3000);
+
+        //2. 사과가 얼마인지 System 출력문 이용해서 확인
+        System.out.println("사과의 가격 : " + map.get("사과") + "원");
+
+        //3. 물가가 올랐습니다. 사과를 1500으로 변경
+        map.put("사과",1500);
+        System.out.println("사과 가격이 올랐습니다. :" + map.get("사과") + "원");
+
+        //4. 바나나 판매합니까? System 출력문 이용해서 확인 Yes or No
+        //                                                true   false
+        String hasBanana = (map.containsKey("바나나")) ? "YES" : "NO";
+        System.out.println("바나나 판매중 인가요? : " + hasBanana);
+
+        //5. 3000원 짜리 과일이 존재합니까? System 출력문 이용해서 확인  Yes or No
+        String has3000Value = map.containsValue(3000) ? "YES" : "NO";
+        System.out.println("3000원 짜리 과일이 존재합니까? : " + has3000Value);
+
+        //6. 바나나 품절됐습니다. 바나나 데이터 삭제
+        map.remove("바나나");
+        System.out.println("바나나가 품절되었습니다.");
+        //7. 과일의 개수는 ?  System 출력문 이용해서 확인
+        System.out.println("현재 과일의 개수 : " + map.size() + "개");
+
+        //8. 모든 키 출력
+        System.out.println("모든 키 확인 : " + map.keySet());
+
+        //9. 모든 값 출력
+        System.out.println("모든 값 확인 : " + map.values());
+
+        //10. 모든 키와 값 출력
+        System.out.println("모든 키와 값 확인 : " + map.entrySet());
     }
 }

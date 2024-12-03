@@ -42,7 +42,11 @@ public class WhileEx {
 
             if(input != -1) sum += input; // -1 이 입력된 경우 제외
             // 입력한 값 갱신을 위해 설정하는 input
-           // input = new Scanner(System.in).nextInt();
+            //LoopRun 에서 Scanner로 입력 받은 값을 실행하는 method1에 들어와서
+            // input 값을 다시 새로 작성하는 코드가 존재하지 않기 때문에 무한루프 발생
+            // 다시 input 값을 재정의 할 수 있도록 작성
+            input = new Scanner(System.in).nextInt();
+            //나눠서 작성하던 Scanner 변수명을 한번에 작성하는 기법
         }
         System.out.println("합계 : " + sum);
     }
