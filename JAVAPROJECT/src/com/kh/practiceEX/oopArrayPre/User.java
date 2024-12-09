@@ -12,10 +12,10 @@ public class User {
     public User() {
     }
 
-    public User(String username, String email, int age) {
+    public User(String username, String email/*, int age*/) {
         this.username = username;
         this.email = email;
-        this.age = age;
+      /*  this.age = age;*/
     }
 
 

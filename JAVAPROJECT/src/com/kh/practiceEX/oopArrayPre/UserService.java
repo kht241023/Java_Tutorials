@@ -60,4 +60,38 @@ public class UserService {
             System.out.println(u1);
         }
     }
+
+
+    public void paramNameEmail(){
+       Scanner sc = new Scanner(System.in);
+        User u = new User("홍길동","hong@hong.com");
+
+        System.out.print("나이를 입력하겠습니까?(yes or no");
+        String q = sc.nextLine(); // yes를 입력받으면 나이입력 ok no 입력하면 나이입력X
+        if(q.equalsIgnoreCase("yes")){
+            System.out.print("나이를 입력하세요 : ");
+            int inputAge = sc.nextInt(); //나이값이 1세이상 99세 미만 저장 가능
+            sc.nextLine();
+            if(inputAge >= 1 && inputAge < 100) {
+                u.setAge(inputAge);
+                System.out.println("나이가 성공적으로 저장되었습니다.");
+            } else { //0세 이거나 100세 이상일경우 나이저장불가능하게 설정
+                System.out.println("나이는 1세이상 100세 미만만 작성 가능합니다.");
+                return; //돌려보내기
+            }
+        } else if(q.equalsIgnoreCase("no")) { //나이입력 안한다 했을 경우
+            System.out.println("나이는 추후 개인정보에서 재설정 가능합니다.");
+        } else { // yes no 이외 다른 글자를 입력했을 때
+            System.out.println("잘못입력했습니다.");
+            return;
+        }
+    }
+    // 메서드 명칭 : void 기능 paramNameEmail()
+    // Scanner 사용
+    //매개변수 생성자 통해서 저장 나이는 필수가 아님
+    // 매개변수 생성자 -> 이름 / 이메일만 필수로 받도록 수정
+
+    // 나이를 입력하시겠습니까? yes / no 대소문자 구분없이 입력받기
+
+    // yes 했다면 setAge 통해 입력받은 나이 저장
 }
