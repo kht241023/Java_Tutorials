@@ -32,8 +32,9 @@ public class CarArrayPreService {
         * cars[j].brand       cars[j + 1].brand     브랜드 이름을 비교했을 때
         * 가나다순으로 봤을 때 결과가 0보다 크다면 값 위치를 교체
         * */
-        for( int i = 0; i < cars.length; i++){
-            for (int j = 0; j < cars.length; j++){
+        // cars.length - 1
+        for( int i = 0; i < cars.length - 1; i++){ //
+            for (int j = 0; j < cars.length - 1; j++){
                 if(cars[j].brand.compareTo(cars[j + 1].brand) > 0){
                     // 두 값을 교체
                     CarArrayPre temp = cars[j]; //현재 찾아낸 cars[j]의 값을 temp 임시변수명에 저장
