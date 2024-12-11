@@ -1,3 +1,41 @@
+String / StringBuilder / StringBuffer
+모두 문자열을 처리하는 클래스
+
+String
+String 변하지 않는 객체 = 불변
+ 한 번 생성된 문자열은 변경할 수 없음 새로 생성되는 것
+ 문자열을 수정하려고 하면 새로운 String 객체 생성
+
+ 장점 : 문자열 값이 변경되지 않기 때문에 여러 스레드가 동시에 사용할 때 안전
+ 단점 : 문자열을 많이 수정하는 작업을 할 경우 성능이 좋지 않음
+         예를 들어, 반복적인 문자열 합성은 많은 메모리와 시간이 소요
+
+         String str = "Hello";
+         str = str + "world"; //Helloworld 새로운 문자열 객체 생성
+
+StringBuilder
+StringBuilder 길이가 변할 수 있는 객체로 문자열을 수정할 수 있음
+문자열을 변경하면 기존 객체를 수정해서 메모리 사용을 줄이고 성능을 향상
+
+장점 : 반복적으로 문자열을 수정할 때 성능이 좋음
+       새로 만들기를 하기 보다는 내부에서 수정처리
+단점 : 스레드가 안전하지 않기 때문에 멀티스레드 환경에서는 사용할 때 주의
+           StringBuilder sb = new StrungBuilder("Hello");
+           sb.append("world");
+
+StringBuffer
+StringBuffer 길이가 변할 수 있는 객체로 문자열을 수정할 수 있음
+StringBuilder와 다르게 여러 스레드(작업)이 동시에 접근하는 환경에서 안전하게 사용할 수 있음
+
+장점 : 문자열을 수정할 때 성능이 좋고, 멀티스레드 환경에서 사용될 때
+        StringBuilder 보다 안전
+단점 : 스레드 안전을 보장하기 위해 동기화를 사용하므로 멀티스레드 환경이 아닌 경우
+        성능이 떨어질 수 있음
+           StringBuffer sbf = new StringBuffer("Hello");
+           sbf.append("world");
+
+
+
 
 
 
