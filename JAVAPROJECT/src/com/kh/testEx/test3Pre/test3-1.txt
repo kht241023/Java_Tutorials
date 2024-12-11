@@ -1,0 +1,32 @@
+문제: 학생 중복 이름 관리 프로그램
+문제 설명
+학생들의 이름을 관리하는 프로그램을 작성하시오.
+학생의 이름을 Set을 사용하여 중복 없이 관리하고, 다음의 요구 사항을 충족하도록 하시오.
+사용코드
+ Set<String> studentSet = new HashSet<>();
+        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
+        while switch case
+        System.out.println("학생 관리 프로그램");
+        System.out.println("1. 학생 추가");
+        System.out.println("2. 학생 삭제");
+        System.out.println("3. 학생 목록 출력");
+        System.out.println("4. 특정 학생 존재 여부 확인");
+        System.out.println("5. 종료");
+        System.out.print("메뉴 선택: ");
+학생 추가:
+학생 이름을 Set에 추가한다.
+학생 이름이 이미 존재하는 경우에는 추가하지 않는다.
+학생 삭제:
+학생 이름을 입력받아 Set에서 삭제한다.
+존재하지 않는 이름을 삭제하려고 하면 "존재하지 않는 학생입니다."라는 메시지를 출력한다.
+학생 목록 출력:
+현재 Set에 저장된 학생들의 이름을 출력한다.
+
+특정 학생 존재 여부 확인:
+특정 학생 이름을 입력받아 Set에 존재하는지 확인하고, 존재 여부에 따라 메시지를 출력한다.
+종료:
+프로그램을 종료할 수 있는 기능을 추가한다.
+구현 사항
+HashSet을 사용하여 학생 이름을 관리한다.
+학생 이름 추가, 삭제, 목록 출력, 존재 여부 확인 등을 처리하는 메서드를 구현한다.
