@@ -1,0 +1,16 @@
+다이어그램에 맞춰서 코드 완성 ArrayList로 문제 해결
+com.kh.testEx.test2pre.Snack
+- name: String
+- flavor: String
+- price: int
++ Snack(name:String, flavor:String, price:int)
++ getName(): String
++ getFlavor(): String
++ getPrice(): int
++ toString(): String
+
+com.kh.testEx.test2pre.SnackRun
+for문으로 Snack 리스트 출력 결과 :
+Snack{name='포테이토칩', flavor='짠맛', price=1500}
+Snack{name='초코파이', flavor='단맛', price=2000}
+Snack{name='허니버터칩', flavor='허니버터맛', price=2500}

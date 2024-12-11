@@ -1,0 +1,20 @@
+다이어그램에 맞춰서 코드를 완성
+com.kh.testEx.test1pre.Member
+- id: String
+- name: String
+- password: String
++ Member(id:String, name:String, password:String)
++ setId(id:String): void
++ setName(name:String): void
++ setPassword(password:String): void
++ getId(): String
++ getName(): String
++ getPassword(): String
++ login(inputId:String, inputPassword:String): boolean
+
+com.kh.testEx.test1pre.MemberRun
+-- set생성자로 아이디 이름     비밀번호 넣기
+--             user1  강길자   pass1
+
+-- user1 pass1 로그인 성공할 경우 로그인 성공! 강길자님 환영합니다.
+                      실패할 경우 로그인 실패! 아이디 또는 비밀번호를 확인하세요. 출력
